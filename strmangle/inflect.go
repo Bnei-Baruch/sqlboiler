@@ -1,6 +1,6 @@
 package strmangle
 
-import "github.com/volatiletech/inflect"
+import "github.com/Bnei-Baruch/inflect"
 
 var boilRuleset *inflect.Ruleset
 
