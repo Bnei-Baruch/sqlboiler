@@ -15,6 +15,10 @@ var (
 	rgxInClause   = regexp.MustCompile(`^(?i)(.*[\s|\)|\?])IN([\s|\(|\?].*)$`)
 )
 
+func BuildQuery(q *Query) (string, []interface{}) {
+	return buildQuery(q)
+}
+
 func buildQuery(q *Query) (string, []interface{}) {
 	var buf *bytes.Buffer
 	var args []interface{}
