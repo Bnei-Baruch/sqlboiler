@@ -100,6 +100,7 @@ func main() {
 	viper.SetDefault("mssql.port", "1433")
 
 	viper.BindPFlags(rootCmd.PersistentFlags())
+	viper.SetEnvKeyReplacer(strings.NewReplacer(".", "_", "-", "_"))
 	viper.AutomaticEnv()
 
 	if err := rootCmd.Execute(); err != nil {
